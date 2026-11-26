@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Almería Field Trip 2027 | GeoZentrum Nordbayern</title>
+<meta name="description" content="Field trip to the Neogene basins of Almería (SE Spain), 15–24 March 2027. Registration for FAU students, max. 14 places.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --fau-blue:#04316A;--fau-blue-dark:#002147;--fau-blue-light:#0056AD;
+  --nat-green:#43B02A;--accent-gold:#C99700;--terracotta:#B85042;
+  --gray-50:#F8FAFC;--gray-100:#F1F5F9;--gray-200:#E2E8F0;--gray-300:#CBD5E1;--gray-400:#94A3B8;
+  --gray-500:#64748B;--gray-600:#475569;--gray-700:#334155;--gray-800:#1E293B;--gray-900:#0F172A;
+  --success:#059669;--warning:#D97706;--error:#DC2626;
+  --font-sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --font-serif:'Merriweather',Georgia,serif;--container-max:1200px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-sans);background:var(--gray-50);color:var(--gray-800);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased}
+body.lang-de .en{display:none!important}
+body.lang-en .de{display:none!important}
+a{color:var(--fau-blue-light)}
+
+/* header (same pattern as the course platforms) */
+.site-header{background:#fff;border-bottom:1px solid var(--gray-200);position:sticky;top:0;z-index:1000}
+.header-top{background:var(--fau-blue);color:#fff;font-size:.8rem;padding:8px 0}
+.header-top-inner,.header-main{max-width:var(--container-max);margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.header-main{padding:12px 24px}
+.breadcrumb{opacity:.85}.breadcrumb a{color:#fff;text-decoration:none}.breadcrumb a:hover{text-decoration:underline}
+.lang-switch{display:flex;gap:4px}
+.lang-btn{padding:4px 10px;border:1px solid rgba(255,255,255,.3);background:transparent;color:#fff;font-size:.75rem;font-family:var(--font-sans);cursor:pointer;border-radius:4px}
+.lang-btn.active{background:#fff;color:var(--fau-blue)}
+.site-brand{display:flex;align-items:center;gap:20px;text-decoration:none;color:var(--gray-900)}
+.brand-logos{display:flex;align-items:center;gap:16px}
+.brand-logos img{height:36px;width:auto}
+.brand-divider{width:1px;height:32px;background:var(--gray-300)}
+.site-title{font-family:var(--font-serif);font-size:1.1rem;font-weight:700;line-height:1.2}
+.site-subtitle{font-size:.75rem;color:var(--gray-500)}
+.header-nav{display:flex;gap:8px}
+.header-btn{padding:8px 16px;background:var(--gray-100);border:1px solid var(--gray-200);border-radius:6px;font-size:.875rem;font-family:var(--font-sans);color:var(--gray-600);text-decoration:none;white-space:nowrap}
+.header-btn:hover{background:var(--gray-200)}
+.header-btn.primary{background:var(--fau-blue);border-color:var(--fau-blue);color:#fff}
+.header-btn.primary:hover{background:var(--fau-blue-dark)}
+
+/* hero */
+.hero{background:linear-gradient(100deg,rgba(0,33,71,.94) 0%,rgba(4,49,106,.82) 45%,rgba(4,49,106,.35) 100%),url("assets/alhambra_sierra_nevada.jpg") center 30%/cover no-repeat;color:#fff;padding:64px 24px 52px}
+.photo-credit{font-size:.7rem;opacity:.6;margin-top:14px}
+figure.pano{margin-top:24px;background:#fff;border:1px solid var(--gray-200);border-radius:12px;overflow:hidden}
+figure.pano img{width:100%;display:block}
+figure.pano figcaption{font-size:.82rem;color:var(--gray-600);padding:10px 16px}
+.logo-strip{display:flex;gap:28px;align-items:center;flex-wrap:wrap}
+.logo-strip img{height:42px;filter:brightness(0) invert(1)}
+.hero-inner{max-width:var(--container-max);margin:0 auto}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.15);padding:8px 16px;border-radius:100px;font-size:.875rem;font-weight:500;margin-bottom:20px}
+.hero h1{font-family:var(--font-serif);font-size:2.6rem;font-weight:700;margin-bottom:12px;letter-spacing:-.02em;line-height:1.15}
+.hero-description{font-size:1.1rem;opacity:.92;max-width:720px}
+.hero-facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-top:32px}
+.fact{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);border-radius:12px;padding:14px 18px}
+.fact .k{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;opacity:.75;font-weight:600}
+.fact .v{font-size:1.15rem;font-weight:600;margin-top:2px}
+.fact .s{font-size:.8rem;opacity:.8}
+.seats{margin-top:22px;display:inline-flex;align-items:center;gap:12px;background:rgba(255,255,255,.14);border-radius:100px;padding:10px 20px;font-size:.95rem}
+.dot{width:10px;height:10px;border-radius:50%;background:var(--accent-gold);flex:none}
+.dot.open{background:var(--nat-green)}.dot.full{background:#f87171}
+
+main{max-width:var(--container-max);margin:0 auto;padding:48px 24px 0}
+section{margin-bottom:56px;scroll-margin-top:110px}
+h2{font-family:var(--font-serif);font-size:1.7rem;color:var(--fau-blue);margin-bottom:8px}
+.lead{color:var(--gray-600);margin-bottom:24px;max-width:780px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:#fff;border:1px solid var(--gray-200);border-radius:12px;padding:24px;box-shadow:0 1px 2px rgba(15,23,42,.04)}
+.card h3{font-size:1.05rem;margin-bottom:10px;color:var(--gray-900)}
+.card ul{padding-left:18px;color:var(--gray-700)}.card li{margin:6px 0}
+.icon-row{display:flex;gap:10px;align-items:center;margin-bottom:10px;color:var(--fau-blue)}
+.box{border-left:4px solid var(--fau-blue-light);background:#EFF6FF;padding:16px 20px;border-radius:0 10px 10px 0;margin-top:20px;color:var(--gray-800)}
+.box.warn{border-color:var(--warning);background:#FFF7ED}
+.box strong{color:var(--gray-900)}
+table.cost{width:100%;border-collapse:collapse;margin-top:6px}
+table.cost td{padding:10px 4px;border-bottom:1px solid var(--gray-200);vertical-align:top}
+table.cost td:last-child{text-align:right;font-weight:600;white-space:nowrap}
+table.cost tr:last-child td{border-bottom:0}
+
+/* forms */
+form{background:#fff;border:1px solid var(--gray-200);border-radius:14px;padding:28px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+label{display:block;font-size:.85rem;font-weight:600;color:var(--gray-700);margin:14px 0 6px}
+input[type=text],input[type=email],select,textarea{width:100%;padding:11px 13px;border:1px solid var(--gray-300);border-radius:8px;font:inherit;background:#fff;color:var(--gray-900)}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--fau-blue-light);outline-offset:1px;border-color:var(--fau-blue-light)}
+textarea{min-height:130px;resize:vertical}
+.check{display:flex;gap:10px;align-items:flex-start;font-weight:400;font-size:.88rem;color:var(--gray-700);margin:12px 0}
+.check input{margin-top:4px;flex:none}
+.btn{margin-top:18px;background:var(--fau-blue);color:#fff;border:0;padding:13px 26px;border-radius:8px;font:600 1rem var(--font-sans);cursor:pointer}
+.btn:hover{background:var(--fau-blue-dark)}.btn:disabled{opacity:.55;cursor:not-allowed}
+.msg{margin-top:16px;padding:12px 16px;border-radius:8px;font-size:.92rem;display:none}
+.msg.ok{display:block;background:#ECFDF5;color:#065F46;border:1px solid #A7F3D0}
+.msg.err{display:block;background:#FEF2F2;color:#991B1B;border:1px solid #FECACA}
+.msg.wait{display:block;background:#FFFBEB;color:#92400E;border:1px solid #FDE68A}
+.hp{position:absolute;left:-9999px;height:0;overflow:hidden}
+.small{font-size:.82rem;color:var(--gray-500)}
+
+footer{background:var(--gray-900);color:#fff;padding:40px 24px;margin-top:40px}
+.footer-inner{max-width:var(--container-max);margin:0 auto;display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+footer p{font-size:.85rem;opacity:.75}footer a{color:#fff}
+
+@media(max-width:860px){
+  .grid2,.grid3,.row{grid-template-columns:1fr}
+  .hero h1{font-size:1.9rem}
+  .header-nav{display:none}
+  .site-title{font-size:1rem}
+  .brand-logos img{height:30px}
+  .breadcrumb{font-size:.72rem}
+}
+@media print{.site-header,form,.header-nav{display:none}}
+</style>
+</head>
+<body class="lang-en">
+
+<header class="site-header">
+  <div class="header-top"><div class="header-top-inner">
+    <div class="breadcrumb">
+      <a href="https://www.fau.de">FAU</a> › <a href="https://www.nat.fau.de">NatFak</a> › <a href="https://www.gzn.nat.fau.de">GeoZentrum</a> ›
+      <span class="en">Almería Field Trip 2027</span><span class="de">Almería-Exkursion 2027</span>
+    </div>
+    <div class="lang-switch">
+      <button class="lang-btn active" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="de">DE</button>
+    </div>
+  </div></div>
+  <div class="header-main">
+    <a href="#top" class="site-brand">
+      <div class="brand-logos">
+        <img src="assets/geozentrum_logo.png" alt="GeoZentrum Nordbayern">
+        <div class="brand-divider"></div>
+        <img src="assets/FAU_NatFak_H_black.png" alt="FAU Naturwissenschaftliche Fakultät">
+      </div>
+      <div>
+        <div class="site-title">Almería Field Trip 2027</div>
+        <div class="site-subtitle">GeoZentrum Nordbayern</div>
+      </div>
+    </a>
+    <nav class="header-nav">
+      <a class="header-btn" href="#contact"><span class="en">Questions</span><span class="de">Fragen</span></a>
+      <a class="header-btn primary" href="#register"><span class="en">Register</span><span class="de">Anmelden</span></a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="top" style="margin-bottom:0">
+  <div class="hero-inner">
+    <div class="hero-badge">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      <span class="en">Field course · Neogene basins of SE Spain</span>
+      <span class="de">Geländekurs · Neogene Becken in SE-Spanien</span>
+    </div>
+    <h1>
+      <span class="en">Almería Basin Field Trip 2027</span>
+      <span class="de">Almería-Becken Exkursion 2027</span>
+    </h1>
+    <p class="hero-description">
+      <span class="en">Ten days of outcrop-based training in facies analysis and sequence stratigraphy of fluvial, coastal, shallow-marine and deep-water clastic systems in the Betic Cordillera.</span>
+      <span class="de">Zehn Tage Geländetraining in Faziesanalyse und Sequenzstratigraphie fluvialer, küstennaher, flachmariner und tiefmariner klastischer Systeme in der Betischen Kordillere.</span>
+    </p>
+    <div class="hero-facts">
+      <div class="fact"><div class="k"><span class="en">Dates</span><span class="de">Termin</span></div><div class="v">15 – 24 March 2027</div><div class="s"><span class="en">Monday to Wednesday</span><span class="de">Montag bis Mittwoch</span></div></div>
+      <div class="fact"><div class="k"><span class="en">Price</span><span class="de">Preis</span></div><div class="v">€ 400 – 450</div><div class="s"><span class="en">final amount depends on approved budget</span><span class="de">Endbetrag abhängig vom bewilligten Budget</span></div></div>
+      <div class="fact"><div class="k"><span class="en">Travel</span><span class="de">Anreise</span></div><div class="v">Nuremberg ⇄ Málaga</div><div class="s"><span class="en">direct flight (Ryanair)</span><span class="de">Direktflug (Ryanair)</span></div></div>
+      <div class="fact"><div class="k"><span class="en">Places</span><span class="de">Plätze</span></div><div class="v"><span class="en">max. 14 students</span><span class="de">max. 14 Studierende</span></div><div class="s"><span class="en">double rooms, breakfast incl.</span><span class="de">Doppelzimmer, inkl. Frühstück</span></div></div>
+    </div>
+    <div class="seats" id="seatBadge" aria-live="polite">
+      <span class="dot" id="seatDot"></span>
+      <span id="seatText"><span class="en">Checking available places…</span><span class="de">Verfügbare Plätze werden geprüft…</span></span>
+    </div>
+    <div class="photo-credit"><span class="en">Alhambra (Granada) with the Sierra Nevada behind</span><span class="de">Alhambra (Granada) mit der Sierra Nevada im Hintergrund</span></div>
+  </div>
+</section>
+
+<main>
+
+<section id="about">
+  <h2><span class="en">What this field trip is about</span><span class="de">Worum es bei der Exkursion geht</span></h2>
+  <p class="lead">
+    <span class="en">The course trains you to read stratigraphic architecture directly from outcrop. We work in the Tabernas–Sorbas Basin, the Guadix Basin and Cabo de Gata (Betic Cordillera, southern Spain), whose clastic successions are excellent reservoir analogues.</span>
+    <span class="de">Der Kurs trainiert, stratigraphische Architektur direkt am Aufschluss zu lesen. Wir arbeiten im Tabernas-Sorbas-Becken, im Guadix-Becken und am Cabo de Gata (Betische Kordillere, Südspanien), deren klastische Abfolgen hervorragende Reservoir-Analoga darstellen.</span>
+  </p>
+  <div class="grid2">
+    <div class="card">
+      <h3><span class="en">Learning outcomes</span><span class="de">Lernziele</span></h3>
+      <ul class="en">
+        <li>Distinguish fluvial, coastal, shallow-marine and deep-water clastic systems from outcrop observations</li>
+        <li>Identify transport mechanisms through facies analysis: wave reworking, tidal currents, mass-transport (sliding, slumping) and sediment gravity flows (debris flows, high- and low-density turbidites)</li>
+        <li>Relate stratal stacking patterns to changes in accommodation and sediment supply</li>
+        <li>Understand the evolution of multistory turbidite channels and of confined vs. unconfined turbidite architecture on slopes</li>
+        <li>Integrate subsurface data (well logs, core description) with outcrop observations</li>
+      </ul>
+      <ul class="de">
+        <li>Fluviale, küstennahe, flachmarine und tiefmarine klastische Systeme anhand von Aufschlussbeobachtungen unterscheiden</li>
+        <li>Transportmechanismen durch Faziesanalyse erkennen: Wellenumlagerung, Gezeitenströmungen, Massenbewegungen (Gleitung, Rutschung) und Sedimentschwerkraftströme (Debris Flows, Turbidite hoher und niedriger Dichte)</li>
+        <li>Stapelungsmuster mit Änderungen von Akkommodationsraum und Sedimentzufuhr verknüpfen</li>
+        <li>Entwicklung mehrstöckiger Turbiditkanäle sowie konfinierter und unkonfinierter Turbiditarchitektur am Hang verstehen</li>
+        <li>Untergrunddaten (Bohrlochmessungen, Kernbeschreibung) mit Aufschlussbeobachtungen integrieren</li>
+      </ul>
+      <p class="small" style="margin-top:12px"><span class="en">Source: Almería field course guidebook (Caracciolo et al., 2025).</span><span class="de">Quelle: Almería-Exkursionsführer (Caracciolo et al., 2025).</span></p>
+    </div>
+    <div class="card">
+      <h3><span class="en">Study area</span><span class="de">Arbeitsgebiet</span></h3>
+      <ul class="en">
+        <li><strong>Tabernas Basin:</strong> intramontane basin between Sierra de los Filabres and Sierra Alhamilla; Tortonian conglomerates, deltaic units and extensive deep-water deposits</li>
+        <li><strong>Sorbas Basin:</strong> prograding coastal (beach) sequences with syn-sedimentary slumping and tectonic control</li>
+        <li><strong>Guadix Basin</strong> and <strong>Cabo de Gata</strong> (volcanic complex with marine sedimentary cover)</li>
+      </ul>
+      <ul class="de">
+        <li><strong>Tabernas-Becken:</strong> intramontanes Becken zwischen Sierra de los Filabres und Sierra Alhamilla; tortone Konglomerate, Deltaeinheiten und ausgedehnte Tiefwasserablagerungen</li>
+        <li><strong>Sorbas-Becken:</strong> progradierende Küsten- (Strand-) Sequenzen mit synsedimentären Rutschungen und tektonischer Kontrolle</li>
+        <li><strong>Guadix-Becken</strong> und <strong>Cabo de Gata</strong> (Vulkankomplex mit mariner Sedimentbedeckung)</li>
+      </ul>
+      <div class="box"><span class="en"><strong>Programme:</strong> the day-by-day itinerary and equipment list will be sent to registered participants. The stop list follows the 2025 field guide.</span><span class="de"><strong>Programm:</strong> Tagesablauf und Ausrüstungsliste erhalten angemeldete Teilnehmende per E-Mail. Die Stopp-Auswahl folgt dem Exkursionsführer 2025.</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="content">
+  <h2><span class="en">Scientific content</span><span class="de">Wissenschaftliche Inhalte</span></h2>
+  <p class="lead"><span class="en">Late Miocene basin evolution and sequence stratigraphy of the western Mediterranean.</span><span class="de">Obermiozäne Beckenentwicklung und Sequenzstratigraphie des westlichen Mittelmeers.</span></p>
+  <div class="card">
+    <ul class="en">
+      <li>Alpine metamorphic basement of the Betic Cordillera</li>
+      <li>Controls of tectonics and sea-level variations on basin development</li>
+      <li>Shoreface, shallow-water deposits and shoreline trajectories in the Sorbas Basin</li>
+      <li>Confined vs. unconfined deep-water systems (Tabernas and Sorbas basins)</li>
+      <li>The endorheic Guadix Basin: base-level variations in response to tectonic uplift and drainage reorganisation</li>
+    </ul>
+    <ul class="de">
+      <li>Alpines metamorphes Grundgebirge der Betischen Kordillere</li>
+      <li>Tektonische und meeresspiegelbedingte Steuerung der Beckenentwicklung</li>
+      <li>Shoreface- und Flachwasserablagerungen sowie Küstenlinien-Trajektorien im Sorbas-Becken</li>
+      <li>Konfinierte vs. unkonfinierte Tiefwassersysteme (Tabernas- und Sorbas-Becken)</li>
+      <li>Das endorheische Guadix-Becken: Basisniveau-Schwankungen infolge tektonischer Hebung und Umorganisation des Entwässerungsnetzes</li>
+    </ul>
+  </div>
+  <figure class="pano">
+    <img src="assets/tabernas_panorama_SN.jpg" alt="S–N panorama of the Tabernas Basin showing Units I–III above the Alborán Domain basement" loading="lazy">
+    <figcaption><span class="en">S–N panorama of the Tabernas Basin: Unit I alluvial fan, Unit II delta and patch-reef, Unit III slope and deep-water turbidite deposits, above the Alborán Domain basement (Nevado-Filábride and Alpujárride complexes). From the FAU field guide.</span><span class="de">S–N-Panorama des Tabernas-Beckens: Einheit I Schwemmfächer, Einheit II Delta und Fleckenriffe, Einheit III Hang- und Tiefwasser-Turbidite über dem Grundgebirge der Alborán-Domäne (Nevado-Filábride- und Alpujárride-Komplex). Aus dem FAU-Exkursionsführer.</span></figcaption>
+  </figure>
+</section>
+
+<section id="logistics">
+  <h2><span class="en">Travel, accommodation and costs</span><span class="de">Anreise, Unterkunft und Kosten</span></h2>
+  <p class="lead"><span class="en">Please read this section carefully before registering: the baggage rule affects what you pay.</span><span class="de">Bitte lies diesen Abschnitt vor der Anmeldung sorgfältig: Die Gepäckregel beeinflusst, was du zahlst.</span></p>
+  <div class="grid3">
+    <div class="card">
+      <div class="icon-row"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg><h3 style="margin:0"><span class="en">Flight</span><span class="de">Flug</span></h3></div>
+      <p><span class="en">Direct flight Nuremberg → Málaga and return with Ryanair. The ticket includes <strong>10 kg hand luggage only</strong>.</span><span class="de">Direktflug Nürnberg → Málaga und zurück mit Ryanair. Das Ticket enthält <strong>nur 10 kg Handgepäck</strong>.</span></p>
+    </div>
+    <div class="card">
+      <div class="icon-row"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 20v-8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8M4 10V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4M2 17h20"/></svg><h3 style="margin:0"><span class="en">Accommodation</span><span class="de">Unterkunft</span></h3></div>
+      <p><span class="en">Double rooms, breakfast included, for the whole stay (15–24 March 2027).</span><span class="de">Doppelzimmer inklusive Frühstück für den gesamten Aufenthalt (15.–24. März 2027).</span></p>
+    </div>
+    <div class="card">
+      <div class="icon-row"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg><h3 style="margin:0"><span class="en">Checked baggage</span><span class="de">Aufgabegepäck</span></h3></div>
+      <p><span class="en">A checked bag (20 or 23 kg, per Ryanair allowance) is <strong>not included</strong> and is paid by the student when booking.</span><span class="de">Aufgegebenes Gepäck (20 oder 23 kg gemäß Ryanair) ist <strong>nicht enthalten</strong> und wird von den Studierenden selbst gezahlt.</span></p>
+    </div>
+  </div>
+  <div class="card" style="margin-top:24px">
+    <h3><span class="en">Price</span><span class="de">Preis</span></h3>
+    <table class="cost">
+      <tr><td><span class="en">Indicative participation price</span><span class="de">Voraussichtlicher Teilnahmepreis</span></td><td>€ 400 – 450</td></tr>
+      <tr><td><span class="en">Final amount to be transferred</span><span class="de">Endgültig zu überweisender Betrag</span></td><td><span class="en">€ 450 minus the plane ticket</span><span class="de">€ 450 abzüglich Flugticket</span></td></tr>
+      <tr><td><span class="en">Checked baggage (optional)</span><span class="de">Aufgabegepäck (optional)</span></td><td><span class="en">paid by you</span><span class="de">auf eigene Kosten</span></td></tr>
+    </table>
+    <div class="box warn"><span class="en"><strong>Budget status:</strong> the price depends on the final budget allowed by GeoZentrum Nordbayern. The exact amount and payment instructions will be sent after registration closes.</span><span class="de"><strong>Budgetstand:</strong> Der Preis hängt vom endgültigen Budget des GeoZentrums Nordbayern ab. Der genaue Betrag und die Zahlungsanweisungen werden nach Anmeldeschluss mitgeteilt.</span></div>
+  </div>
+</section>
+
+<section id="register">
+  <h2><span class="en">Registration</span><span class="de">Anmeldung</span></h2>
+  <p class="lead"><span class="en">Maximum 14 participants. Places are allocated in order of registration; once all places are taken you will be placed on a waiting list.</span><span class="de">Maximal 14 Teilnehmende. Plätze werden in der Reihenfolge der Anmeldung vergeben; sind alle Plätze belegt, kommst du auf die Warteliste.</span></p>
+  <form id="regForm" novalidate>
+    <div class="row">
+      <div><label for="r_name"><span class="en">Full name</span><span class="de">Vollständiger Name</span> *</label><input type="text" id="r_name" name="name" autocomplete="name" required maxlength="120"></div>
+      <div><label for="r_email"><span class="en">FAU e-mail address</span><span class="de">FAU-E-Mail-Adresse</span> *</label><input type="email" id="r_email" name="email" autocomplete="email" placeholder="ab12cdef@fau.de" required maxlength="160"></div>
+    </div>
+    <div class="row">
+      <div><label for="r_prog"><span class="en">Degree programme</span><span class="de">Studiengang</span> *</label>
+        <input type="text" id="r_prog" name="programme" required maxlength="80" placeholder="e.g. BSc Geowissenschaften"></div>
+      <div><label for="r_sem"><span class="en">Current semester</span><span class="de">Aktuelles Semester</span> *</label><input type="text" id="r_sem" name="semester" required maxlength="20" placeholder="e.g. 5"></div>
+    </div>
+    <label for="r_notes"><span class="en">Anything we should know? (dietary needs, mobility, room-mate preference) — optional</span><span class="de">Hinweise? (Ernährung, Mobilität, Zimmerwunsch) — optional</span></label>
+    <textarea id="r_notes" name="notes" style="min-height:80px" maxlength="500"></textarea>
+    <div class="hp"><label>Website<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+    <label class="check"><input type="checkbox" id="r_terms" required><span><span class="en">I have read the cost and baggage information: only 10 kg hand luggage is included in the flight, and a checked bag is at my own cost. I understand the final price is confirmed after the budget is approved.</span><span class="de">Ich habe die Informationen zu Kosten und Gepäck gelesen: Im Flug ist nur 10 kg Handgepäck enthalten, aufgegebenes Gepäck zahle ich selbst. Mir ist bekannt, dass der Endpreis nach Budgetbewilligung bestätigt wird.</span></span></label>
+    <label class="check"><input type="checkbox" id="r_priv" required><span><span class="en">I agree that my data is stored for organising this field trip and deleted after the trip (see privacy note below).</span><span class="de">Ich stimme zu, dass meine Daten zur Organisation dieser Exkursion gespeichert und danach gelöscht werden (siehe Datenschutzhinweis unten).</span></span></label>
+    <button class="btn" type="submit" id="regBtn"><span class="en">Submit registration</span><span class="de">Anmeldung absenden</span></button>
+    <div class="msg" id="regMsg" role="status"></div>
+  </form>
+</section>
+
+<section id="contact">
+  <h2><span class="en">Questions?</span><span class="de">Fragen?</span></h2>
+  <p class="lead"><span class="en">Send us a message and we will reply by e-mail.</span><span class="de">Schreib uns, wir antworten per E-Mail.</span></p>
+  <form id="ctForm" novalidate>
+    <div class="row">
+      <div><label for="c_name"><span class="en">Name</span><span class="de">Name</span> *</label><input type="text" id="c_name" name="name" required maxlength="120"></div>
+      <div><label for="c_email"><span class="en">Your e-mail</span><span class="de">Deine E-Mail</span> *</label><input type="email" id="c_email" name="email" required maxlength="160"></div>
+    </div>
+    <label for="c_msg"><span class="en">Message</span><span class="de">Nachricht</span> *</label>
+    <textarea id="c_msg" name="message" required maxlength="3000"></textarea>
+    <div class="hp"><label>Website<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+    <button class="btn" type="submit" id="ctBtn"><span class="en">Send message</span><span class="de">Nachricht senden</span></button>
+    <div class="msg" id="ctMsg" role="status"></div>
+  </form>
+</section>
+
+<section id="privacy">
+  <h2 style="font-size:1.2rem"><span class="en">Privacy note</span><span class="de">Datenschutzhinweis</span></h2>
+  <p class="small" style="max-width:860px">
+    <span class="en">Registration and contact data (name, e-mail, programme, semester, optional notes, message) are sent to a form handler operated by the course instructor, stored in a spreadsheet, and used only to organise this field trip and to answer your enquiry. They are deleted after the trip. [To be completed by the instructor before publication: official FAU data-protection wording, controller and contact — check with FAU's data-protection office.]</span>
+    <span class="de">Anmelde- und Kontaktdaten (Name, E-Mail, Studiengang, Semester, optionale Hinweise, Nachricht) werden an einen vom Dozenten betriebenen Formularempfänger gesendet, in einer Tabelle gespeichert und ausschließlich zur Organisation dieser Exkursion und zur Beantwortung deiner Anfrage verwendet. Sie werden nach der Exkursion gelöscht. [Vor Veröffentlichung vom Dozenten zu ergänzen: offizieller FAU-Datenschutztext, Verantwortlicher und Kontakt — mit der Datenschutzstelle der FAU abstimmen.]</span>
+  </p>
+</section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="logo-strip"><img src="assets/geozentrum_logo.png" alt="GeoZentrum Nordbayern"><img src="assets/FAU_NatFak_H_black.png" alt="FAU Naturwissenschaftliche Fakultät"><div><strong>GeoZentrum Nordbayern</strong><p>Friedrich-Alexander-Universität Erlangen-Nürnberg</p></div></div>
+    <p><span class="en">Field trip leader: PD Dr. Luca Caracciolo</span><span class="de">Exkursionsleitung: PD Dr. Luca Caracciolo</span></p>
+  </div>
+</footer>
+
+<script>
+/* ===== CONFIG ===== */
+const CONFIG = {
+  // Paste the Google Apps Script web-app URL here after deploying backend/Code.gs
+  ENDPOINT: "PASTE_APPS_SCRIPT_WEB_APP_URL_HERE",
+  MAX_PLACES: 14
+};
+const configured = !CONFIG.ENDPOINT.startsWith("PASTE_");
+
+/* ===== language ===== */
+function setLanguage(l){
+  document.body.classList.remove('lang-en','lang-de');document.body.classList.add('lang-'+l);
+  document.documentElement.lang=l;
+  document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('active',b.dataset.lang===l));
+  try{localStorage.setItem('almeria27-lang',l)}catch(e){}
+  renderSeats();
+}
+document.querySelectorAll('.lang-btn').forEach(b=>b.addEventListener('click',()=>setLanguage(b.dataset.lang)));
+let startLang='en';
+try{startLang=localStorage.getItem('almeria27-lang')||((navigator.language||'').startsWith('de')?'de':'en')}catch(e){}
+
+/* ===== seats ===== */
+let seats=null; // {confirmed, waitlist}
+function t(en,de){return document.body.classList.contains('lang-de')?de:en}
+function renderSeats(){
+  const dot=document.getElementById('seatDot'),txt=document.getElementById('seatText');
+  if(!configured){dot.className='dot';txt.innerHTML=t('Registration opens soon','Anmeldung startet in Kürze');return}
+  if(!seats){dot.className='dot';txt.innerHTML=t('Checking available places…','Verfügbare Plätze werden geprüft…');return}
+  const free=Math.max(0,CONFIG.MAX_PLACES-seats.confirmed);
+  if(free>0){dot.className='dot open';txt.innerHTML=t(`<strong>${free}</strong> of ${CONFIG.MAX_PLACES} places still available`,`Noch <strong>${free}</strong> von ${CONFIG.MAX_PLACES} Plätzen frei`)}
+  else{dot.className='dot full';txt.innerHTML=t('All places taken — waiting list open','Alle Plätze vergeben — Warteliste offen')}
+}
+async function loadSeats(){
+  if(!configured){renderSeats();return}
+  try{const r=await fetch(CONFIG.ENDPOINT+'?action=status',{cache:'no-store'});seats=await r.json()}catch(e){seats=null}
+  renderSeats();
+}
+
+/* ===== submit helper (text/plain avoids a CORS pre-flight with Apps Script) ===== */
+async function send(payload){
+  if(!configured) throw new Error('not-configured');
+  const r=await fetch(CONFIG.ENDPOINT,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(payload)});
+  return r.json();
+}
+function show(el,cls,html){el.className='msg '+cls;el.innerHTML=html}
+const emailOk=v=>/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v);
+
+document.getElementById('regForm').addEventListener('submit',async e=>{
+  e.preventDefault();
+  const f=e.target,m=document.getElementById('regMsg'),b=document.getElementById('regBtn');
+  const d={action:'register',name:f.name.value.trim(),email:f.email.value.trim().toLowerCase(),programme:f.programme.value,semester:f.semester.value.trim(),notes:f.notes.value.trim(),website:f.website.value,lang:document.body.classList.contains('lang-de')?'de':'en'};
+  if(!d.name||!emailOk(d.email)||!d.programme||!d.semester) return show(m,'err',t('Please fill in all required fields with a valid e-mail address.','Bitte alle Pflichtfelder mit gültiger E-Mail-Adresse ausfüllen.'));
+  if(!/@(fau\.de|fau\.eu|fauad\.fau\.de)$/.test(d.email)) return show(m,'err',t('Please use your FAU e-mail address (…@fau.de).','Bitte verwende deine FAU-E-Mail-Adresse (…@fau.de).'));
+  if(!f.querySelector('#r_terms').checked||!f.querySelector('#r_priv').checked) return show(m,'err',t('Please accept both confirmations.','Bitte beide Bestätigungen akzeptieren.'));
+  b.disabled=true;
+  try{
+    const res=await send(d);
+    if(res.ok&&res.status==='confirmed'){show(m,'ok',t('Registration received — you have a place. You will be contacted at your FAU address with the final price and payment details.','Anmeldung eingegangen — du hast einen Platz. Du wirst über deine FAU-Adresse über den Endpreis und die Zahlungsdetails informiert.'));f.reset()}
+    else if(res.ok&&res.status==='waitlist'){show(m,'wait',t('All 14 places are taken. You are on the waiting list; we will contact you if a place becomes free.','Alle 14 Plätze sind vergeben. Du stehst auf der Warteliste; wir melden uns, falls ein Platz frei wird.'));f.reset()}
+    else if(res.error==='duplicate') show(m,'err',t('This e-mail address is already registered.','Diese E-Mail-Adresse ist bereits angemeldet.'));
+    else show(m,'err',t('Registration could not be saved. Please try again or write to us via the contact form.','Die Anmeldung konnte nicht gespeichert werden. Bitte erneut versuchen oder das Kontaktformular nutzen.'));
+  }catch(err){
+    show(m,'err',err.message==='not-configured'?t('Registration is not open yet.','Die Anmeldung ist noch nicht geöffnet.'):t('Network error. Please try again.','Netzwerkfehler. Bitte erneut versuchen.'));
+  }
+  b.disabled=false;loadSeats();
+});
+
+document.getElementById('ctForm').addEventListener('submit',async e=>{
+  e.preventDefault();
+  const f=e.target,m=document.getElementById('ctMsg'),b=document.getElementById('ctBtn');
+  const d={action:'contact',name:f.name.value.trim(),email:f.email.value.trim(),message:f.message.value.trim(),website:f.website.value};
+  if(!d.name||!emailOk(d.email)||d.message.length<5) return show(m,'err',t('Please fill in all fields with a valid e-mail address.','Bitte alle Felder mit gültiger E-Mail-Adresse ausfüllen.'));
+  b.disabled=true;
+  try{
+    const res=await send(d);
+    if(res.ok){show(m,'ok',t('Thank you — your message has been sent. You will receive a reply by e-mail.','Danke — deine Nachricht wurde gesendet. Du erhältst eine Antwort per E-Mail.'));f.reset()}
+    else show(m,'err',t('Message could not be sent. Please try again later.','Nachricht konnte nicht gesendet werden. Bitte später erneut versuchen.'));
+  }catch(err){
+    show(m,'err',err.message==='not-configured'?t('The contact form is not active yet.','Das Kontaktformular ist noch nicht aktiv.'):t('Network error. Please try again.','Netzwerkfehler. Bitte erneut versuchen.'));
+  }
+  b.disabled=false;
+});
+
+setLanguage(startLang);
+loadSeats();
+</script>
+</body>
+</html>
