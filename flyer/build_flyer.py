@@ -42,9 +42,9 @@ li b{{color:#04316A}}
 .foot div{{font-size:9.5pt;opacity:.85;text-align:right;line-height:1.4}}
 </style></head><body>
 <div class="top">
-  <span class="tag">FIELD TRIP · EXKURSION · GeoZentrum Nordbayern</span>
+  <span class="tag">BASIN ANALYSIS + SEQUENCE STRATIGRAPHY</span>
   <h1>Almería Basin<br>Field Trip 2027</h1>
-  <p class="sub">Facies analysis and sequence stratigraphy in the Neogene basins of SE Spain<div class="de" style="color:#fff;opacity:.8">Faziesanalyse und Sequenzstratigraphie in den neogenen Becken Südostspaniens</div></p>
+  <p class="sub">Basin analysis and sequence stratigraphy in the Neogene basins of SE Spain<div class="de" style="color:#fff;opacity:.8">Beckenanalyse und Sequenzstratigraphie in den neogenen Becken Südostspaniens</div></p>
   <svg class="bands" viewBox="0 0 210 20" preserveAspectRatio="none"><path d="M0 9 C40 3 80 14 120 8 S190 4 210 9 V20 H0Z" fill="#B85042"/><path d="M0 13 C45 8 85 17 125 12 S190 9 210 13 V20 H0Z" fill="#C99700"/><path d="M0 16 C50 12 90 19 130 15 S190 13 210 16 V20 H0Z" fill="#43B02A"/></svg>
 </div>
 <div class="dates">
