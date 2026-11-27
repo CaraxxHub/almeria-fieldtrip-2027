@@ -21,12 +21,12 @@ h1{{text-shadow:0 1mm 3mm rgba(0,0,0,.6);font-family:Georgia,'Times New Roman',s
 .sub{{font-size:13pt;opacity:.92;margin-top:5mm;max-width:150mm;line-height:1.4}}
 .bands{{position:absolute;left:0;right:0;bottom:0;height:20mm}}
 .dates{{position:absolute;left:16mm;right:16mm;top:98mm;background:#fff;border-radius:4mm;box-shadow:0 2mm 6mm rgba(0,33,71,.25);padding:6mm 8mm;display:flex;justify-content:space-between;align-items:center}}
-.dates .big{{font-family:Georgia,serif;font-size:25pt;font-weight:700;color:#04316A}}
+.dates .big{{font-family:Georgia,serif;font-size:21pt;font-weight:700;color:#04316A}}
 .dates .lab{{font-size:9pt;text-transform:uppercase;letter-spacing:.1em;color:#64748B;font-weight:600}}
 .dates .r{{text-align:right}}
-.mid{{padding:27mm 16mm 0;display:grid;grid-template-columns:1fr 62mm;gap:10mm}}
+.mid{{padding:22mm 16mm 0;display:grid;grid-template-columns:1fr 62mm;gap:10mm}}
 ul{{list-style:none}}
-li{{font-size:12.5pt;margin-bottom:3.4mm;padding-left:7mm;position:relative;line-height:1.35}}
+li{{font-size:11.5pt;margin-bottom:2.2mm;padding-left:7mm;position:relative;line-height:1.35}}
 li:before{{content:"";position:absolute;left:0;top:2.2mm;width:3mm;height:3mm;background:#B85042;border-radius:.6mm}}
 li b{{color:#04316A}}
 .de{{font-size:10pt;color:#475569;margin-top:1mm}}
@@ -36,7 +36,7 @@ li b{{color:#04316A}}
 .scan{{margin-top:3mm;font-weight:700;color:#04316A;font-size:12pt}}
 .scan small{{display:block;font-weight:500;color:#475569;font-size:9pt;margin-top:.5mm}}
 .url{{font-size:8.5pt;color:#475569;margin-top:2mm;word-break:break-all}}
-.note{{margin:6mm 16mm 0;padding:4mm 6mm;border-left:1.5mm solid #C99700;background:#FFF8E1;font-size:10.5pt;line-height:1.4}}
+.note{{margin:4mm 16mm 0;padding:3mm 6mm;border-left:1.5mm solid #C99700;background:#FFF8E1;font-size:10.5pt;line-height:1.4}}
 .foot{{position:absolute;left:0;right:0;bottom:0;height:24mm;background:#0F172A;color:#fff;padding:0 16mm;display:flex;align-items:center;justify-content:space-between}}
 .foot img{{height:11mm;filter:brightness(0) invert(1)}}
 .foot div{{font-size:9.5pt;opacity:.85;text-align:right;line-height:1.4}}
@@ -49,6 +49,7 @@ li b{{color:#04316A}}
 </div>
 <div class="dates">
   <div><div class="lab">Dates · Termin</div><div class="big">15 – 24 March 2027</div></div>
+  <div style="text-align:center"><div class="lab">Register by · Anmeldung bis</div><div class="big" style="color:#B85042">15 Dec 2026</div></div>
   <div class="r"><div class="lab">Places · Plätze</div><div class="big">max. 14</div></div>
 </div>
 <div class="mid">
@@ -57,7 +58,8 @@ li b{{color:#04316A}}
     <li><b>Double rooms</b>, breakfast included<div class="de">Doppelzimmer inkl. Frühstück</div></li>
     <li><b>€ 400 – 450</b> depending on final budget<div class="de">je nach endgültigem Budget</div></li>
     <li><b>Flight: 10 kg hand luggage only</b> — checked bag (20/23 kg) paid by you<div class="de">Nur 10 kg Handgepäck — Aufgabegepäck auf eigene Kosten</div></li>
-    <li><b>Registration &amp; questions</b> on the web page — scan the QR code<div class="de">Anmeldung &amp; Fragen auf der Webseite — QR-Code scannen</div></li>
+    <li><b>Buy your flight only after confirmation</b> by the field trip leader<div class="de">Flug erst nach Bestätigung durch die Exkursionsleitung buchen</div></li>
+    <li><b>Register online</b> — scan the QR code<div class="de">Online anmelden — QR-Code scannen</div></li>
   </ul>
   <div class="qr"><div class="qrbox">{qr_svg}</div><div class="scan">Register now<small>Jetzt anmelden</small></div><div class="url">{short}</div></div>
 </div>

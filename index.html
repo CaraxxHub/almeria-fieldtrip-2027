@@ -169,6 +169,7 @@ footer p{font-size:.85rem;opacity:.75}footer a{color:#fff}
       <div class="fact"><div class="k"><span class="en">Dates</span><span class="de">Termin</span></div><div class="v">15 – 24 March 2027</div><div class="s"><span class="en">Monday to Wednesday</span><span class="de">Montag bis Mittwoch</span></div></div>
       <div class="fact"><div class="k"><span class="en">Price</span><span class="de">Preis</span></div><div class="v">€ 400 – 450</div><div class="s"><span class="en">final amount depends on approved budget</span><span class="de">Endbetrag abhängig vom bewilligten Budget</span></div></div>
       <div class="fact"><div class="k"><span class="en">Travel</span><span class="de">Anreise</span></div><div class="v">Nuremberg ⇄ Málaga</div><div class="s"><span class="en">direct flight (Ryanair)</span><span class="de">Direktflug (Ryanair)</span></div></div>
+      <div class="fact"><div class="k"><span class="en">Registration deadline</span><span class="de">Anmeldeschluss</span></div><div class="v">15 December 2026</div><div class="s"><span class="en">23:59 (CET)</span><span class="de">23:59 Uhr (MEZ)</span></div></div>
       <div class="fact"><div class="k"><span class="en">Places</span><span class="de">Plätze</span></div><div class="v"><span class="en">max. 14 students</span><span class="de">max. 14 Studierende</span></div><div class="s"><span class="en">double rooms, breakfast incl.</span><span class="de">Doppelzimmer, inkl. Frühstück</span></div></div>
     </div>
     <div class="seats" id="seatBadge" aria-live="polite">
@@ -265,6 +266,7 @@ footer p{font-size:.85rem;opacity:.75}footer a{color:#fff}
       <p><span class="en">A checked bag (20 or 23 kg, per Ryanair allowance) is <strong>not included</strong> and is paid by the student when booking.</span><span class="de">Aufgegebenes Gepäck (20 oder 23 kg gemäß Ryanair) ist <strong>nicht enthalten</strong> und wird von den Studierenden selbst gezahlt.</span></p>
     </div>
   </div>
+  <div class="box warn" style="margin-top:24px"><span class="en"><strong>Do not buy your flight ticket yet.</strong> Book the flight only after the field trip leader has confirmed your place and told you which flights to book.</span><span class="de"><strong>Bitte noch kein Flugticket kaufen.</strong> Buche den Flug erst, nachdem die Exkursionsleitung deinen Platz bestätigt und dir die zu buchenden Flüge mitgeteilt hat.</span></div>
   <div class="card" style="margin-top:24px">
     <h3><span class="en">Price</span><span class="de">Preis</span></h3>
     <table class="cost">
@@ -278,7 +280,7 @@ footer p{font-size:.85rem;opacity:.75}footer a{color:#fff}
 
 <section id="register">
   <h2><span class="en">Registration</span><span class="de">Anmeldung</span></h2>
-  <p class="lead"><span class="en">Maximum 14 participants. Places are allocated in order of registration; once all places are taken you will be placed on a waiting list.</span><span class="de">Maximal 14 Teilnehmende. Plätze werden in der Reihenfolge der Anmeldung vergeben; sind alle Plätze belegt, kommst du auf die Warteliste.</span></p>
+  <p class="lead"><span class="en">Registration is open until <strong>15 December 2026</strong>. Maximum 14 participants. Places are allocated in order of registration; once all places are taken you will be placed on a waiting list. Buy your flight ticket only after the field trip leader confirms your place.</span><span class="de">Die Anmeldung ist bis zum <strong>15. Dezember 2026</strong> geöffnet. Maximal 14 Teilnehmende. Plätze werden in der Reihenfolge der Anmeldung vergeben; sind alle Plätze belegt, kommst du auf die Warteliste. Flugticket erst nach Bestätigung durch die Exkursionsleitung kaufen.</span></p>
   <form id="regForm" novalidate>
     <div class="row">
       <div><label for="r_name"><span class="en">Full name</span><span class="de">Vollständiger Name</span> *</label><input type="text" id="r_name" name="name" autocomplete="name" required maxlength="120"></div>
@@ -292,7 +294,7 @@ footer p{font-size:.85rem;opacity:.75}footer a{color:#fff}
     <label for="r_notes"><span class="en">Anything we should know? (dietary needs, mobility, room-mate preference) — optional</span><span class="de">Hinweise? (Ernährung, Mobilität, Zimmerwunsch) — optional</span></label>
     <textarea id="r_notes" name="notes" style="min-height:80px" maxlength="500"></textarea>
     <div class="hp"><label>Website<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
-    <label class="check"><input type="checkbox" id="r_terms" required><span><span class="en">I have read the cost and baggage information: only 10 kg hand luggage is included in the flight, and a checked bag is at my own cost. I understand the final price is confirmed after the budget is approved.</span><span class="de">Ich habe die Informationen zu Kosten und Gepäck gelesen: Im Flug ist nur 10 kg Handgepäck enthalten, aufgegebenes Gepäck zahle ich selbst. Mir ist bekannt, dass der Endpreis nach Budgetbewilligung bestätigt wird.</span></span></label>
+    <label class="check"><input type="checkbox" id="r_terms" required><span><span class="en">I have read the cost and baggage information: only 10 kg hand luggage is included in the flight, and a checked bag is at my own cost. I understand the final price is confirmed after the budget is approved, and that I must not buy a flight ticket before the field trip leader confirms my place.</span><span class="de">Ich habe die Informationen zu Kosten und Gepäck gelesen: Im Flug ist nur 10 kg Handgepäck enthalten, aufgegebenes Gepäck zahle ich selbst. Mir ist bekannt, dass der Endpreis nach Budgetbewilligung bestätigt wird und dass ich vor der Bestätigung durch die Exkursionsleitung kein Flugticket kaufe.</span></span></label>
     <label class="check"><input type="checkbox" id="r_priv" required><span><span class="en">I agree that my data is stored for organising this field trip and deleted after the trip (see privacy note below).</span><span class="de">Ich stimme zu, dass meine Daten zur Organisation dieser Exkursion gespeichert und danach gelöscht werden (siehe Datenschutzhinweis unten).</span></span></label>
     <button class="btn" type="submit" id="regBtn"><span class="en">Submit registration</span><span class="de">Anmeldung absenden</span></button>
     <div class="msg" id="regMsg" role="status"></div>
@@ -336,8 +338,10 @@ footer p{font-size:.85rem;opacity:.75}footer a{color:#fff}
 const CONFIG = {
   // Paste the Google Apps Script web-app URL here after deploying backend/Code.gs
   ENDPOINT: "PASTE_APPS_SCRIPT_WEB_APP_URL_HERE",
-  MAX_PLACES: 14
+  MAX_PLACES: 14,
+  DEADLINE: new Date("2026-12-15T23:59:59+01:00")
 };
+const closed = () => Date.now() > CONFIG.DEADLINE.getTime();
 const configured = !CONFIG.ENDPOINT.startsWith("PASTE_");
 
 /* ===== language ===== */
@@ -358,9 +362,10 @@ function t(en,de){return document.body.classList.contains('lang-de')?de:en}
 function renderSeats(){
   const dot=document.getElementById('seatDot'),txt=document.getElementById('seatText');
   if(!configured){dot.className='dot';txt.innerHTML=t('Registration opens soon','Anmeldung startet in Kürze');return}
+  if(closed()){dot.className='dot full';txt.innerHTML=t('Registration closed on 15 December 2026','Anmeldung am 15. Dezember 2026 geschlossen');return}
   if(!seats){dot.className='dot';txt.innerHTML=t('Checking available places…','Verfügbare Plätze werden geprüft…');return}
   const free=Math.max(0,CONFIG.MAX_PLACES-seats.confirmed);
-  if(free>0){dot.className='dot open';txt.innerHTML=t(`<strong>${free}</strong> of ${CONFIG.MAX_PLACES} places still available`,`Noch <strong>${free}</strong> von ${CONFIG.MAX_PLACES} Plätzen frei`)}
+  if(free>0){dot.className='dot open';txt.innerHTML=t(`Registration open until 15 Dec 2026 · <strong>${free}</strong> of ${CONFIG.MAX_PLACES} places available`,`Anmeldung bis 15.12.2026 · noch <strong>${free}</strong> von ${CONFIG.MAX_PLACES} Plätzen frei`)}
   else{dot.className='dot full';txt.innerHTML=t('All places taken — waiting list open','Alle Plätze vergeben — Warteliste offen')}
 }
 async function loadSeats(){
@@ -382,14 +387,16 @@ document.getElementById('regForm').addEventListener('submit',async e=>{
   e.preventDefault();
   const f=e.target,m=document.getElementById('regMsg'),b=document.getElementById('regBtn');
   const d={action:'register',name:f.name.value.trim(),email:f.email.value.trim().toLowerCase(),programme:f.programme.value,semester:f.semester.value.trim(),notes:f.notes.value.trim(),website:f.website.value,lang:document.body.classList.contains('lang-de')?'de':'en'};
+  if(closed()) return show(m,'err',t('Registration closed on 15 December 2026.','Die Anmeldung wurde am 15. Dezember 2026 geschlossen.'));
   if(!d.name||!emailOk(d.email)||!d.programme||!d.semester) return show(m,'err',t('Please fill in all required fields with a valid e-mail address.','Bitte alle Pflichtfelder mit gültiger E-Mail-Adresse ausfüllen.'));
   if(!/@(fau\.de|fau\.eu|fauad\.fau\.de)$/.test(d.email)) return show(m,'err',t('Please use your FAU e-mail address (…@fau.de).','Bitte verwende deine FAU-E-Mail-Adresse (…@fau.de).'));
   if(!f.querySelector('#r_terms').checked||!f.querySelector('#r_priv').checked) return show(m,'err',t('Please accept both confirmations.','Bitte beide Bestätigungen akzeptieren.'));
   b.disabled=true;
   try{
     const res=await send(d);
-    if(res.ok&&res.status==='confirmed'){show(m,'ok',t('Registration received — you have a place. You will be contacted at your FAU address with the final price and payment details.','Anmeldung eingegangen — du hast einen Platz. Du wirst über deine FAU-Adresse über den Endpreis und die Zahlungsdetails informiert.'));f.reset()}
+    if(res.ok&&res.status==='confirmed'){show(m,'ok',t('Registration received — you have a place. You will be contacted at your FAU address with the final price, payment details and the flights to book. Do not buy a ticket before then.','Anmeldung eingegangen — du hast einen Platz. Du erhältst über deine FAU-Adresse den Endpreis, die Zahlungsdetails und die zu buchenden Flüge. Bitte vorher kein Ticket kaufen.'));f.reset()}
     else if(res.ok&&res.status==='waitlist'){show(m,'wait',t('All 14 places are taken. You are on the waiting list; we will contact you if a place becomes free.','Alle 14 Plätze sind vergeben. Du stehst auf der Warteliste; wir melden uns, falls ein Platz frei wird.'));f.reset()}
+    else if(res.error==='closed') show(m,'err',t('Registration closed on 15 December 2026.','Die Anmeldung wurde am 15. Dezember 2026 geschlossen.'));
     else if(res.error==='duplicate') show(m,'err',t('This e-mail address is already registered.','Diese E-Mail-Adresse ist bereits angemeldet.'));
     else show(m,'err',t('Registration could not be saved. Please try again or write to us via the contact form.','Die Anmeldung konnte nicht gespeichert werden. Bitte erneut versuchen oder das Kontaktformular nutzen.'));
   }catch(err){

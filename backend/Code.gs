@@ -9,6 +9,7 @@
  */
 const CONFIG = {
   MAX_PLACES: 14,
+  DEADLINE: new Date('2026-12-15T23:59:59+01:00'),   // registration closes 15 Dec 2026, 23:59 CET
   // Where notifications go. '' = the Gmail account that owns this script.
   // To skip Gmail forwarding and ALSO mail the FAU account directly, add it to EXTRA_NOTIFY.
   OWNER_EMAIL: '',
@@ -61,6 +62,7 @@ function register_(d) {
   const name = clean_(d.name, 120), email = clean_(d.email, 160).toLowerCase();
   const prog = clean_(d.programme, 80), sem = clean_(d.semester, 20), notes = clean_(d.notes, 500);
   const lang = d.lang === 'de' ? 'de' : 'en';
+  if (new Date() > CONFIG.DEADLINE) return json_({ ok: false, error: 'closed' });
   if (!name || !validEmail_(email) || !prog || !sem) return json_({ ok: false, error: 'invalid' });
   const domain = email.split('@')[1];
   if (CONFIG.ALLOWED_DOMAINS.indexOf(domain) < 0) return json_({ ok: false, error: 'domain' });
