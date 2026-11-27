@@ -21,7 +21,8 @@ const CONFIG = {
   SEND_STUDENT_CONFIRMATION: false
 };
 
-function ss_() { return SpreadsheetApp.getActiveSpreadsheet(); }
+const SHEET_ID = '19cq_RvOXNjOZIQg7gVy3Pj9tPRoRHiD1OF-_PP3EH2w';  // 'Almeria 2027 registrations' (Gmail Drive)
+function ss_() { return SpreadsheetApp.openById(SHEET_ID); }
 function sheet_(name, header) {
   let sh = ss_().getSheetByName(name);
   if (!sh) { sh = ss_().insertSheet(name); sh.appendRow(header); sh.setFrozenRows(1); }
@@ -134,6 +135,15 @@ function contact_(d) {
 }
 
 /** Run once from the editor to test mail permissions. */
-function testMail_() {
+function testMail() {
   MailApp.sendEmail(owner_(), '[Almería 2027] Test', 'Backend mail works. Check that it is forwarded to the FAU account.');
+}
+
+/** Run once from the editor: creates both tabs and names the spreadsheet. */
+function setup() {
+  ss_().rename('Almeria 2027 registrations');
+  reg_(); cont_();
+  const s1 = ss_().getSheetByName('Sheet1') || ss_().getSheetByName('Tabelle1');
+  if (s1 && ss_().getSheets().length > 2) ss_().deleteSheet(s1);
+  MailApp.sendEmail(owner_(), '[Almería 2027] Backend set up', 'Registration backend is set up. If you read this in your FAU inbox, forwarding works.');
 }
